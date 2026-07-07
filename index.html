@@ -1,0 +1,388 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PiantechOfficial | About</title>
+<link rel="stylesheet" href="css/all.min.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 10%, #ffffff 0, transparent 25%),
+    radial-gradient(circle at 90% 20%, #f8f8f8 0, transparent 28%),
+    linear-gradient(135deg, #ffffff, #f1f1f1, #fafafa);
+  color: #222;
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 18px 60px;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.profile-wrap {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 18px;
+  border-radius: 30px;
+  padding: 8px;
+  background: linear-gradient(145deg, #fff, #dcdcdc);
+  box-shadow:
+    14px 14px 0 #d8d8d8,
+    0 25px 45px rgba(0,0,0,.18),
+    inset 0 0 0 2px rgba(255,255,255,.8);
+  transform: rotateX(8deg) rotateY(-8deg);
+}
+
+.profile-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  display: block;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 8px 0 #d6d6d6, 0 18px 35px rgba(0,0,0,.12);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: clamp(35px, 8vw, 72px);
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -2px;
+  text-shadow: 4px 5px 0 #d7d7d7;
+}
+
+.subtitle {
+  margin: 18px auto 30px;
+  max-width: 760px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 600;
+}
+
+.links {
+  width: 100%;
+  max-width: 980px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.btn {
+  position: relative;
+  min-height: 118px;
+  text-decoration: none;
+  color: #1c1c1c;
+  background: linear-gradient(145deg, #ffffff, #eeeeee);
+  border-radius: 28px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 2px solid rgba(0,0,0,.05);
+  box-shadow:
+    10px 10px 0 #d1d1d1,
+    0 20px 35px rgba(0,0,0,.13),
+    inset 0 2px 0 rgba(255,255,255,.9);
+  transition: .22s ease;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.75), transparent);
+  transform: translateX(-100%);
+  transition: .5s;
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+.btn:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow:
+    12px 16px 0 #c9c9c9,
+    0 28px 45px rgba(0,0,0,.18);
+}
+
+.icon {
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 28px;
+  box-shadow: 6px 6px 0 #cfcfcf;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.content h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 7px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.click {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #222;
+  color: #fff;
+  padding: 9px 15px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 4px 4px 0 #bdbdbd;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 45px;
+  color: #666;
+  font-weight: 700;
+}
+
+.float-tag {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  background: #fff;
+  color: #222;
+  border-radius: 20px;
+  padding: 12px 16px;
+  box-shadow: 8px 8px 0 #d1d1d1, 0 14px 28px rgba(0,0,0,.13);
+  font-weight: 900;
+  z-index: 10;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 28px 14px 50px;
+  }
+
+  .profile-wrap {
+    width: 142px;
+    height: 142px;
+    border-radius: 26px;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .btn {
+    min-height: 108px;
+    padding: 18px;
+    border-radius: 24px;
+    box-shadow:
+      7px 8px 0 #d1d1d1,
+      0 18px 28px rgba(0,0,0,.12);
+  }
+
+  .icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    font-size: 24px;
+  }
+
+  .content h3 {
+    font-size: 17px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .float-tag {
+    font-size: 12px;
+    left: 12px;
+    bottom: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="header">
+      <div class="profile-wrap">
+        <img src="images/0x357t1f.jpg" alt="PiantechOfficial">
+      </div>
+
+      <div class="badge">
+        <i class="fa-solid fa-store"></i>
+        PiantechOfficial
+      </div>
+
+      <h1 class="title">Order Digital Cepat Aman</h1>
+
+      <p class="subtitle">
+        Pusat layanan gift Telegram, premium apps, script custom, dan fix error.
+        Semua dibuat simpel, cepat, murah, dan siap bantu kebutuhan bot atau project kamu.
+      </p>
+    </section>
+
+    <section class="links">
+      <a class="btn" href="https://t.me/Pianorderbot" target="_blank">
+        <div class="icon"><i class="fa-solid fa-gift"></i></div>
+        <div class="content">
+          <h3>BOT AUTO ORDER GIFT</h3>
+          <p>Order gift Telegram otomatis, cepat, dan praktis.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://t.me/PianPremiumBot" target="_blank">
+        <div class="icon"><i class="fa-solid fa-crown"></i></div>
+        <div class="content">
+          <h3>BOT AUTO ORDER PREM APSS</h3>
+          <p>Layanan premium apps otomatis untuk kebutuhan digital kamu.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://t.me/Piantechofficial" target="_blank">
+        <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <div class="content">
+          <h3>CHANNEL OFFICIAL</h3>
+          <p>Update info, katalog, promo, dan layanan terbaru.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://t.me/Piantechhh" target="_blank">
+        <div class="icon"><i class="fa-solid fa-users"></i></div>
+        <div class="content">
+          <h3>CHANNEL BACKUP</h3>
+          <p>Channel tambahan untuk update dan informasi penting.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://t.me/Piantechh" target="_blank">
+        <div class="icon"><i class="fa-solid fa-code"></i></div>
+        <div class="content">
+          <h3>JASA SCRIPT 2K/FITUR</h3>
+          <p>Bikin fitur bot murah, rapi, dan sesuai kebutuhan.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://t.me/Piantechh" target="_blank">
+        <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div class="content">
+          <h3>JASA FIX ERROR</h3>
+          <p>Bantu perbaiki error script, bot, API, atau fitur rusak.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://wa.me/6285821883917" target="_blank">
+        <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="content">
+          <h3>WHATSAPP</h3>
+          <p>Hubungi langsung untuk order, tanya harga, atau konsultasi.</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://chat.whatsapp.com/K2UGrsIGJkKAqn5QyUyUyb?s=cl&p=a&mlu=2&ilr=0&amv=3" target="_blank">
+        <div class="icon"><i class="fa-solid fa-users"></i></div>
+        <div class="content">
+          <h3>CODING EDUCATION & COMMUNICATION</h3>
+          <p>Edukasi coding untuk bangsa Indonesia, Dan bercanda bersama</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="btn" href="https://chat.whatsapp.com/JzFLIgCDfL02extNOh9BJn?s=cl&p=a&mlu=2&ilr=0&amv=3" target="_blank">
+        <div class="icon"><i class="fa-solid fa-crown"></i></div>
+        <div class="content">
+          <h3>GROUP MARGA</h3>
+          <p>Grub marga seru seruan doang buat cari temen / pasangan</p>
+          <span class="click">klik <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </section>
+
+    <div class="footer">
+      PiantechOfficial siap bantu kebutuhan digital kamu
+    </div>
+  </main>
+
+<script>
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("mousemove", (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const midX = rect.width / 2;
+    const midY = rect.height / 2;
+
+    const rotateX = ((y - midY) / midY) * -5;
+    const rotateY = ((x - midX) / midX) * 5;
+
+    btn.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.style.transform = "translateY(0) rotateX(0) rotateY(0)";
+  });
+});
+</script>
+
+
+</body></html>
